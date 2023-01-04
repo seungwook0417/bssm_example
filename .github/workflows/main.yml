@@ -42,13 +42,13 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-definition.json
-        container-name: saba_cicd_test
-        image: ${{ secrets.Registry_URL }}/saba_cicd_test:latest
+        container-name: bssm
+        image: ${{ secrets.Registry_URL }}/bssm:latest
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        cluster: saba-ecs-cluster
-        service: saba_cicd_test
+        cluster: bssm
+        service: bssm
         wait-for-service-stability: true

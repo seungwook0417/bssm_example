@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "bssm",
-            "image": "753824932405.dkr.ecr.ap-northeast-1.amazonaws.com/bssm:latest",
+            "image": "753824932405.dkr.ecr.ap-northeast-2.amazonaws.com/bssm:latest",
             "portMappings": [
                 {
                     "containerPort": 5000,
